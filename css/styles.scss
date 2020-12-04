@@ -1,0 +1,45 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    .playerOne, .playerTwo {
+        width: 50%;
+        text-align: center;
+        .dice {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 15%;
+            }
+        }
+        .scores {
+            display: flex;
+            justify-content: center;
+            .roundTotal, .gameTotal {
+                border: 1px solid black;
+                border-radius: 10px;
+                text-align: center;
+                padding: 0 30px;
+                margin: 40px;
+                width: 150px;
+                height: 200px;
+                
+            }
+            .score {
+                font-weight: 700;
+                font-size: 60px;
+                text-align: center;
+            }
+            
+        }
+    }
+}
