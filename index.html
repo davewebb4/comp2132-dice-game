@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Local Style Sheet -->
 
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="wrapper">
 
-        <div class="playerOne" id="playerOne">
-            <h1>Player</h1>
-            <div class="dice" id="dice">
-                <img src="images/inverted-dice-1.svg" id="dice1" alt="single die">
-                <img src="images/inverted-dice-6.svg" id="dice2" alt="single die">
-            </div>
-            <div class="scores">
-                <div class="roundTotal">
-                    <h3>Round Score</h3>
-                    <p class="score" id="playerOneRound">0</p>
-                </div>
-                <div class="gameTotal">
-                    <h3>Total Score</h3>
-                    <p class="score" id="playerOneTotal">0</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="playerTwo" id="playerTwo">
-            <h1>Computer</h1>
-            <div class="dice" id="dice">
-                <img src="images/inverted-dice-6.svg" id="dice3" alt="single die">
-                <img src="images/inverted-dice-1.svg" id="dice4" alt="single die">
-            </div>
-            <div class="scores">
-                <div class="roundTotal">
-                    <h3>Round Score</h3>
-                    <p class="score" id="playerTwoRound">0</p>
-                </div>
-                <div class="gameTotal">
-                    <h3>Total Score</h3>
-                    <p class="score" id="playerTwoTotal">0</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <button class="btn" id="newGame">
-        <i class="fas fa-sync"></i>New Game 
-    </button>
-    <button class="btn" id="buttonRoll">
-        <i class="fas fa-dice"></i>Roll Dice
-    </button>
-
-
-    <!-- <h1 class="main-title">Dice Game</h1>
-    <div class="players">
-        <div class="player">
-            <h2>Player 1</h2>
-            <div class="diceContainer">
-                <div >
+        <div class="gameBoard">
+            <div class="playerOne" id="playerOne">
+                <h1><span>Player</span></h1>
+                <div class="dice" id="dice">
                     <img src="images/inverted-dice-1.svg" id="dice1" alt="single die">
+                    <img src="images/inverted-dice-6.svg" id="dice2" alt="single die">
                 </div>
-                <div>            
-                    <img src="images/inverted-dice-1.svg" id="dice2" alt="single die">
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Round</h3>
+                        <p class="score" id="playerOneRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total</h3>
+                        <p class="score" id="playerOneTotal">0</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="player">
-            <h2>Player 2</h2>
-            <div class="diceContainer">
-                <div>
-                    <img src="images/inverted-dice-1.svg" id="dice3" alt="single die">
-                </div>
-                <div>            
+
+            <div class="playerTwo" id="playerTwo">
+                <h1><span>Computer</span></h1>
+                <div class="dice" id="dice">
+                    <img src="images/inverted-dice-6.svg" id="dice3" alt="single die">
                     <img src="images/inverted-dice-1.svg" id="dice4" alt="single die">
                 </div>
+                <div class="scores">
+                    <div class="roundTotal scoreBox">
+                        <h3>Round</h3>
+                        <p class="score" id="playerTwoRound">0</p>
+                    </div>
+                    <div class="gameTotal scoreBox">
+                        <h3>Total</h3>
+                        <p class="score" id="playerTwoTotal">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonHolder">
+                <button class="btn" id="newGame">
+                    <i class="fas fa-sync"></i>New Game
+                </button>
+                <button class="btn" id="buttonRoll">
+                    <i class="fas fa-dice"></i>Roll Dice
+                </button>
+                <p>Roll Number: <span id="rollNumber">0</span></p>
             </div>
         </div>
+
     </div>
-    <button id="buttonRoll">Roll Dice</button> -->
+
+    <div class="popUp" id="popUp" hidden>
+        <div class="popUpContainer">
+            <h1 id="winner"></h1>
+            <h3>Player Score: <span id="playerScore"></span></h3>
+            <h3>Computer Score: <span id="computerScore"></span></h3>
+            <button class="btn" id="playAgain">Play Again</button>
+        </div>
+    </div>
+
 
     <script src="scripts/dice.js"></script>
 </body>
+
 </html>

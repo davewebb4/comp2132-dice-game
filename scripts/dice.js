@@ -45,17 +45,36 @@ function calculateScore( value1, value2 ) {
 
 document.getElementById('buttonRoll').addEventListener('click', function() {
     rollCount++;
-    if ( rollCount <= 3) {
-        rollDice();
-        playerOneTotal = playerOneTotal + playerOneRoundTotal;
-        playerTwoTotal = playerTwoTotal + playerTwoRoundTotal;
+    rollDice();
+    playerOneTotal = playerOneTotal + playerOneRoundTotal;
+    playerTwoTotal = playerTwoTotal + playerTwoRoundTotal;
 
-        document.getElementById('playerOneRound').innerText = playerOneRoundTotal;
-        document.getElementById('playerTwoRound').innerText = playerTwoRoundTotal;
-        document.getElementById('playerOneTotal').innerText = playerOneTotal;
-        document.getElementById('playerTwoTotal').innerText = playerTwoTotal;
-    } else {
-        alert('Round complete');
+    document.getElementById('playerOneRound').innerText = playerOneRoundTotal;
+    document.getElementById('playerTwoRound').innerText = playerTwoRoundTotal;
+    document.getElementById('playerOneTotal').innerText = playerOneTotal;
+    document.getElementById('playerTwoTotal').innerText = playerTwoTotal;
+    document.getElementById('rollNumber').innerText = rollCount;
+
+    if (rollCount == 3 ) {
+        let winner = "";
+
+        if ( playerOneTotal > playerTwoTotal ) {
+            document.getElementById('winner').innerHTML = "The <span>Player</span> has won the game"
+        } else if ( playerOneTotal == playerTwoTotal ) {
+            document.getElementById('winner').innerHTML = "This game has ended in a tie"
+        } else {
+            document.getElementById('winner').innerHTML = "The <span>Computer</span> has won the game"
+        }
+        document.getElementById('playerScore').innerText = playerOneTotal;
+        document.getElementById('computerScore').innerText = playerTwoTotal
+        setTimeout(function() { 
+            document.getElementById('popUp').hidden = false;
+        }, 300 );
     }
 });
-
+document.getElementById('newGame').addEventListener('click', function() {
+    location.reload();
+});
+document.getElementById('playAgain').addEventListener('click', function() {
+    location.reload();
+});
