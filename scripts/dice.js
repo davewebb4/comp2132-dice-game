@@ -95,3 +95,10 @@ document.getElementById('newGame').addEventListener('click', function() {
 document.getElementById('playAgain').addEventListener('click', function() {
     location.reload();
 });
+//Event listener for rules
+document.getElementById('rulesButton').addEventListener('click', function() {
+    document.getElementById('rules').style.transform = "scale(1)";
+});
+document.getElementById('rulesClose').addEventListener('click', function() {
+    document.getElementById('rules').style.transform = "scale(0)";
+})

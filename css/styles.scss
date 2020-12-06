@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            #newGame, #buttonRoll {
+            #newGame, #buttonRoll, #rulesButton {
                 margin-bottom: 50px;
             }
             .btn {
@@ -137,6 +137,35 @@ h1, h2, h3, h4, h5, h6 {
     }
     span {
         color: $light;
+    }
+}
+#rules {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($embers, .98);
+    transform: scale(0);
+    transition: .5s ease all;
+    padding: 50px;
+    line-height: 2rem;
+
+    h2 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+    button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        background: transparent;
+
+        .fab {
+            font-size: 25px;
+        }
     }
 }
 

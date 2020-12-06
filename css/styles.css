@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
           transform: translate(-50%, -50%);
 }
 
-.wrapper .gameBoard .buttonHolder #newGame, .wrapper .gameBoard .buttonHolder #buttonRoll {
+.wrapper .gameBoard .buttonHolder #newGame, .wrapper .gameBoard .buttonHolder #buttonRoll, .wrapper .gameBoard .buttonHolder #rulesButton {
   margin-bottom: 50px;
 }
 
@@ -229,5 +229,38 @@ h1, h2, h3, h4, h5, h6 {
 
 #popUp span {
   color: #fefaf6;
+}
+
+#rules {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(184, 38, 1, 0.98);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  padding: 50px;
+  line-height: 2rem;
+}
+
+#rules h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+#rules button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: transparent;
+}
+
+#rules button .fab {
+  font-size: 25px;
 }
 /*# sourceMappingURL=styles.css.map */
