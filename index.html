@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Local Style Sheet -->
-
     <link rel="stylesheet" href="css/styles.css">
     <title>Dice Game - My first JS game</title>
 </head>
 
 <body>
-
     <div class="wrapper">
-
+        <!-- Gameboard start -->
         <div class="gameBoard">
+            <!-- Player One area -->
             <div class="playerOne" id="playerOne">
                 <h1><span>Player</span></h1>
                 <div class="dice" id="dice">
@@ -36,7 +35,8 @@
                     </div>
                 </div>
             </div>
-
+            <!-- End Player One -->
+            <!-- Player Teo area -->
             <div class="playerTwo" id="playerTwo">
                 <h1><span>Computer</span></h1>
                 <div class="dice" id="dice">
@@ -54,6 +54,8 @@
                     </div>
                 </div>
             </div>
+            <!-- End player 2 -->
+            <!-- Button container -->
             <div class="buttonHolder">
                 <button class="btn" id="newGame">
                     <i class="fas fa-sync"></i>New Game
@@ -66,34 +68,36 @@
                     <i class="fas fa-dice"></i>Roll Dice
                 </button>
                 <p>Roll Number: <span id="rollNumber">0</span></p>
-        </div>
-
-    </div>
-
-    <div class="popUp" id="popUp" hidden>
-        <div class="popUpContainer">
-            <h1 id="winner"></h1>
-            <h3>Player Score: <span id="playerScore"></span></h3>
-            <h3>Computer Score: <span id="computerScore"></span></h3>
-            <button class="btn" id="playAgain">Play Again</button>
-        </div>
-    </div>
-    <div class="rules" id="rules">
-        <div class="rulesContainer">
-            <button id="rulesClose"><i class="fab fa-mixer"></i></button>
-            <h2>Rules of Play</h2>
-            <p>Game will consist of 3 rounds of play.</p>
-            <p>Each round, the players will roll a pair of dice to establish a round score.</p>
-            <p>Player with highest score after 3 rounds is declared the winner.</p>
-            <h2>How to Score</h2>
-            <p>If a player rolls a 1 on either die, round score is 0.</p>
-            <p>If a player rolls matching die values, round score is double the total of both dice.</p>
-            <p>Any other combinations, round score is the total of both dice.</p>
-        </div>
-    </div>
-
-
-    <script src="scripts/dice.js"></script>
+                <!-- </div>End Buttons -->
+            </div>
+            <!-- Game Board end-->
+            <!-- Results Pop Up -->
+            <div class="popUp" id="popUp" hidden>
+                <div class="popUpContainer">
+                    <h1 id="winner"></h1>
+                    <h3>Player Score: <span id="playerScore"></span></h3>
+                    <h3>Computer Score: <span id="computerScore"></span></h3>
+                    <button class="btn" id="playAgain">Play Again</button>
+                </div>
+            </div>
+            <!-- End Results -->
+            <!-- Rules Start -->
+            <div class="rules" id="rules">
+                <div class="rulesContainer">
+                    <button id="rulesClose"><i class="fab fa-mixer"></i></button>
+                    <h2>Rules of Play</h2>
+                    <p>Game will consist of 3 rounds of play.</p>
+                    <p>Each round, the players will roll a pair of dice to establish a round score.</p>
+                    <p>Player with highest score after 3 rounds is declared the winner.</p>
+                    <h2>How to Score</h2>
+                    <p>If a player rolls a 1 on either die, round score is 0.</p>
+                    <p>If a player rolls matching die values, round score is double the total of both dice.</p>
+                    <p>Any other combinations, round score is the total of both dice.</p>
+                </div>
+            </div>
+            <!-- Rules End -->
+            <!-- Script Area -->
+            <script src="scripts/dice.js"></script>
 </body>
 
 </html>
